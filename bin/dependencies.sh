@@ -25,7 +25,9 @@ echo "git branch=> "
 git branch
 
 
-ncu -u && git add package.json
+npm install mathpix-markdown-it
+
+git add .
 
 git commit -m "updated dependencies"
 if [ "$?" != "0" ]; then
