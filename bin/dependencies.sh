@@ -4,9 +4,10 @@ set -eu
 repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 remote_name="origin"
 main_branch="master"
-target_branch="dependencies-latest-2"
+target_branch="dependencies-latest-3"
 
-REPO="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+#REPO="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+REPO="https://github.com/OlgaRedozubova/smiles-test.git"
 # Create Temporary Directory
 TEMP=$(mktemp -d)
 
@@ -20,6 +21,9 @@ echo "git status=> "
 
 git status
 
+git remote -v
+echo "git remote=> "
+
 # start out with a pristine target branch
 git checkout -B "$target_branch"
 
@@ -32,11 +36,11 @@ npm install mathpix-markdown-it
 
 git add .
 
-git commit -m "updated dependencies"
-if [ "$?" != "0" ]; then
-	echo "nothing to commit"
-	exit 0
-fi
+git commit -m "updated dependencies 3"
+#if [ "$?" != "0" ]; then
+#	echo "nothing to commit"
+#	exit 0
+#fi
 
 git push origin "$target_branch"
 
