@@ -1,0 +1,15 @@
+name: dependencies
+
+on: push
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: ./bin/check-dependencies.sh
+      env:
+        DEPENDENCIES_TOKEN: ${{ secrets.DEPENDENCIES_TOKEN }}
+        GITHUB_REPOSITORY: smiles-test
+        GITHUB_ACTOR: olgaredozubova
+        GITHUB_EMAIL: olgared82@gmail.com
