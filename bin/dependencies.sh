@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eu
 
-repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_USERNAME/$GITHUB_REPOSITORY.git"
+repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_USERNAME/$REPOSITORY_NAME.git"
 remote_name="origin"
 main_branch="master"
 target_branch="dependencies-latest-4"
