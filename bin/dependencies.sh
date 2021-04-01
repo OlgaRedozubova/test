@@ -4,7 +4,7 @@ set -eu
 repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 remote_name="origin"
 main_branch="master"
-target_branch="dependencies-latest"
+target_branch="dependencies-latest-1"
 
 cd "$GITHUB_WORKSPACE"
 
