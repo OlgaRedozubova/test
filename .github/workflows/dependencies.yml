@@ -11,6 +11,6 @@ jobs:
     - run: ./bin/dependencies.sh
       env:
         DEPENDENCIES_TOKEN: ${{ secrets.DEPENDENCIES_TOKEN }}
-        GITHUB_REPOSITORY: smiles-test
+        GITHUB_REPOSITORY: test
         GITHUB_ACTOR: olgaredozubova
         GITHUB_EMAIL: olgared82@gmail.com
