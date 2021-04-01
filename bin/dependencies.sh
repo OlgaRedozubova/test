@@ -25,7 +25,7 @@ echo "git branch=> "
 git branch
 
 
-./bin/update-dependencies.sh
+ncu -u && git add package.json
 
 git commit -m "updated dependencies"
 if [ "$?" != "0" ]; then
