@@ -44,7 +44,7 @@ git commit -m "updated dependencies 3"
 #fi
 
 echo "git log=> "
-git git log
+git log
 
 echo "push origin => $target_branch"
 git push origin "$target_branch"
