@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - run: ls -l ./bin/dependencies.sh
+    - run: chmod +x ./bin/dependencies.sh
+    - run: ./bin/dependencies.sh
       env:
         DEPENDENCIES_TOKEN: ${{ secrets.DEPENDENCIES_TOKEN }}
         GITHUB_REPOSITORY: smiles-test
