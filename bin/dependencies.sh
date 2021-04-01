@@ -28,20 +28,25 @@ echo "git remote=> "
 git checkout -B "$target_branch"
 
 echo "git branch=> "
-
 git branch
 
 
 npm install mathpix-markdown-it
 
+echo "git add=> "
 git add .
 
+echo "git commit=> "
 git commit -m "updated dependencies 3"
 #if [ "$?" != "0" ]; then
 #	echo "nothing to commit"
 #	exit 0
 #fi
 
+echo "git log=> "
+git git log
+
+echo "push origin => $target_branch"
 git push origin "$target_branch"
 
 #git remote set-url "$remote_name" "$repo_uri"
