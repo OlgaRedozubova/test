@@ -16,6 +16,8 @@ TEMP=$(mktemp -d)
 git config --global user.name "$GITHUB_ACTOR"
 git config --global user.email "$GITHUB_EMAIL"
 
+echo "git repo_uri=> $repo_uri"
+
 git clone "$repo_uri" "$TEMP"
 cd "$TEMP"
 echo "git status=> "
