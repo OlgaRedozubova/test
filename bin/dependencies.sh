@@ -47,7 +47,7 @@ echo "git log=> "
 git log
 
 echo "push origin => $target_branch"
-git push origin "$target_branch"
+#git push origin "$target_branch"
 
 #git remote set-url "$remote_name" "$repo_uri"
-#git push --force-with-lease "$remote_name" "$target_branch"
+git push --force-with-lease "$remote_name" "$target_branch"
