@@ -4,13 +4,18 @@ set -eu
 repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 remote_name="origin"
 main_branch="master"
-target_branch="dependencies-latest-1"
+target_branch="dependencies-latest-2"
 
+REPO="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+# Create Temporary Directory
+TEMP=$(mktemp -d)
+
+# Setup git
 git config --global user.name "$GITHUB_ACTOR"
 git config --global user.email "$GITHUB_EMAIL"
 
-git clone https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git
-
+git clone "$REPO" "$TEMP"
+cd "$TEMP"
 echo "git status=> "
 
 git status
@@ -33,5 +38,7 @@ if [ "$?" != "0" ]; then
 	exit 0
 fi
 
-git remote set-url "$remote_name" "$repo_uri"
-git push --force-with-lease "$remote_name" "$target_branch"
+git push origin "$target_branch"
+
+#git remote set-url "$remote_name" "$repo_uri"
+#git push --force-with-lease "$remote_name" "$target_branch"
