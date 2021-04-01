@@ -13,11 +13,17 @@ echo "GITHUB_WORKSPACE => $GITHUB_WORKSPACE"
 git config user.name "$GITHUB_ACTOR"
 git config user.email "$GITHUB_EMAIL"
 
-echo "git status=> " git status
+echo "git status=> "
+
+git status
 
 # start out with a pristine target branch
 git checkout -B "$target_branch"
-git reset --hard "$remote_name/$main_branch"
+
+echo "git branch=> "
+
+git branch
+
 
 ./bin/update-dependencies.sh
 
