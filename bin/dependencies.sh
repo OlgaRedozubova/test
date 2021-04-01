@@ -8,10 +8,12 @@ target_branch="dependencies-latest"
 
 cd "$GITHUB_WORKSPACE"
 
-echo "$GITHUB_WORKSPACE"
+echo "GITHUB_WORKSPACE => $GITHUB_WORKSPACE"
 
 git config user.name "$GITHUB_ACTOR"
 git config user.email "$GITHUB_EMAIL"
+
+echo "git status=> " git status
 
 # start out with a pristine target branch
 git checkout -B "$target_branch"
