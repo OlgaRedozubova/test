@@ -5,7 +5,7 @@ set -eu
 repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/OlgaRedozubova/smiles-test.git"
 remote_name="origin"
 main_branch="master"
-target_branch="dependencies-latest-3"
+target_branch="dependencies-latest-4"
 
 #REPO="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git"
 #REPO="https://github.com/OlgaRedozubova/smiles-test.git"
@@ -17,6 +17,8 @@ git config --global user.name "$GITHUB_ACTOR"
 git config --global user.email "$GITHUB_EMAIL"
 
 echo "git repo_uri=> $repo_uri"
+echo "git GITHUB_USERNAME=> $GITHUB_USERNAME"
+echo "git REPOSITORY_NAME=> REPOSITORY_NAME"
 echo "git GITHUB_REPOSITORY=> $GITHUB_REPOSITORY"
 
 git clone "$repo_uri" "$TEMP"
