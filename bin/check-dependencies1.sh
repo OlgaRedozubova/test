@@ -16,7 +16,7 @@ git config user.email "$GITHUB_EMAIL"
 git checkout -B "$target_branch"
 git reset --hard "$remote_name/$main_branch"
 
-./update-dependencies.sh
+./bin/update-dependencies.sh
 
 git commit -m "updated dependencies"
 if [ "$?" != "0" ]; then
