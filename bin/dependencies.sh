@@ -6,12 +6,10 @@ remote_name="origin"
 main_branch="master"
 target_branch="dependencies-latest-1"
 
-cd "$GITHUB_WORKSPACE"
+git config --global user.name "$GITHUB_ACTOR"
+git config --global user.email "$GITHUB_EMAIL"
 
-echo "GITHUB_WORKSPACE => $GITHUB_WORKSPACE"
-
-git config user.name "$GITHUB_ACTOR"
-git config user.email "$GITHUB_EMAIL"
+git clone https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_REPOSITORY.git
 
 echo "git status=> "
 
