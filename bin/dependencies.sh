@@ -18,7 +18,7 @@ git config --global user.email "$GITHUB_EMAIL"
 
 echo "git repo_uri=> $repo_uri"
 echo "git GITHUB_USERNAME=> $GITHUB_USERNAME"
-echo "git REPOSITORY_NAME=> REPOSITORY_NAME"
+echo "git REPOSITORY_NAME=> $REPOSITORY_NAME"
 echo "git GITHUB_REPOSITORY=> $GITHUB_REPOSITORY"
 
 git clone "$repo_uri" "$TEMP"

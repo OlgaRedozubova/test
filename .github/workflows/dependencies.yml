@@ -14,3 +14,4 @@ jobs:
         GITHUB_ACTOR: olgaredozubova
         GITHUB_EMAIL: olgared82@gmail.com
         REPOSITORY_NAME: smiles-test
+        GITHUB_USERNAME: OlgaRedozubova
