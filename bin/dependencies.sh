@@ -2,7 +2,7 @@
 set -eu
 
 #REPO="https://<user>:${{ secrets.user_token }}@github.com/org/dest-repo"
-repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/smiles-test.git"
+repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/OlgaRedozubova/smiles-test.git"
 remote_name="origin"
 main_branch="master"
 target_branch="dependencies-latest-3"
