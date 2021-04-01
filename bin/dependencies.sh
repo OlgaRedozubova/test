@@ -2,9 +2,6 @@
 set -eu
 
 repo_uri="https://x-access-token:$DEPENDENCIES_TOKEN@github.com/$GITHUB_USERNAME/$REPOSITORY_NAME.git"
-remote_name="origin"
-main_branch="master"
-target_branch="dependencies-latest-4"
 
 # Create Temporary Directory
 TEMP=$(mktemp -d)
@@ -28,7 +25,7 @@ git remote -v
 echo "git remote=> "
 
 # start out with a pristine target branch
-git checkout -B "$target_branch"
+git checkout -B "$TARGET_BRANCH"
 
 echo "git branch=> "
 git branch
@@ -49,8 +46,7 @@ git commit -m "updated dependencies 3"
 echo "git log=> "
 git log
 
-echo "push origin => $target_branch"
-#git push origin "$target_branch"
+echo "push origin => $TARGET_BRANCH"
 
 #git remote set-url "$remote_name" "$repo_uri"
-git push --force-with-lease "$remote_name" "$target_branch"
+git push --force-with-lease "$REMOTE_NAME" "$TARGET_BRANCH"

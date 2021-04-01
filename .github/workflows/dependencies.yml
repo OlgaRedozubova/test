@@ -15,3 +15,6 @@ jobs:
         GITHUB_EMAIL: olgared82@gmail.com
         REPOSITORY_NAME: smiles-test
         GITHUB_USERNAME: OlgaRedozubova
+        REMOTE_NAME: origin
+        MAIN_BRANCH: master
+        TARGET_BRANCH: dependencies-latest-5
