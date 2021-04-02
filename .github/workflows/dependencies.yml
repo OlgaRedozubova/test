@@ -17,4 +17,4 @@ jobs:
         GITHUB_USERNAME: OlgaRedozubova
         REMOTE_NAME: origin
         MAIN_BRANCH: master
-        TARGET_BRANCH: dependencies-latest-5
+        TARGET_BRANCH: dependencies-latest-6

@@ -50,3 +50,7 @@ echo "push origin => $TARGET_BRANCH"
 
 #git remote set-url "$remote_name" "$repo_uri"
 git push --force-with-lease "$REMOTE_NAME" "$TARGET_BRANCH"
+
+curl -X POST -u $GITHUB_USERNAME -k \
+  -d '{{"title": "new feature","head": "$TARGET_BRANCH","base": "master"}}' \
+  https://api.github.com/repos/[$GITHUB_USERNAME]/[$REPOSITORY_NAME]/pulls
